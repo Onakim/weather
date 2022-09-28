@@ -1,11 +1,21 @@
+.wrapper{
+   display: flex;
+   flex-direction: column;
+}
+header{
+   width: 100%;
+   background: rgb(246, 254, 253);
+}
 .container {
     max-width: 1024px;
     margin: 0 auto;
+    
 }
 .top__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 .top__header ul {
     list-style: none;
@@ -22,4 +32,7 @@
 .head__logo img {
     width: 64px;
     height: auto;
+}
+.page{
+   flex: 1 1 auto;
 }
