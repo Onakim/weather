@@ -1,6 +1,10 @@
+.wrapper{
+   display: flex;
+   flex-direction: column;
+}
 header{
    width: 100%;
-   background: rgb(230, 241, 240);
+   background: rgb(246, 254, 253);
 }
 .container {
     max-width: 1024px;
@@ -28,4 +32,7 @@ header{
 .head__logo img {
     width: 64px;
     height: auto;
+}
+.page{
+   flex: 1 1 auto;
 }
