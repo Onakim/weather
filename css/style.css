@@ -1,11 +1,17 @@
+header{
+   width: 100%;
+   background: rgb(230, 241, 240);
+}
 .container {
     max-width: 1024px;
     margin: 0 auto;
+    
 }
 .top__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 .top__header ul {
     list-style: none;
