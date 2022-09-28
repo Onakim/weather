@@ -1,0 +1,25 @@
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.top__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top__header ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+.top__header li {
+    cursor: pointer;
+    padding-right: 40px;
+}
+.top__header li:hover {
+    font-weight: bold;
+}
+.head__logo img {
+    width: 64px;
+    height: auto;
+}
