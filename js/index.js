@@ -1,7 +1,8 @@
 const API = '1ca1726301773f02a2fe357a72b037cd';
 const URL = 'https://api.openweathermap.org/data/3.0/onecall?lat=';
-// https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
-const exampl = 'https://api.openweathermap.org/data/2.5/weather?q=London&appid=';
+// https://api.openweathermap.org/data/3.0/onecall?lat=50.4333&lon=30.5167&exclude=hourly&appid={API key}
+const exampl = 'https://api.openweathermap.org/data/2.5/weather?q=Kyiv-&lang=ua&appid=';
+// const exampl = 'https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=';
 
 
 $().ready(function() {
@@ -47,7 +48,7 @@ $.ajax({
     dataType: "json"
 }).done(function(data) {
     console.log(data);
-}).fail(function() {
-    console.log("Error json")
+}).fail(function(data) {
+    console.log(data.responseJSON.message)
 });
 // console.log(exampl + API);
