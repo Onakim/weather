@@ -6,6 +6,10 @@ const exampl = 'https://api.openweathermap.org/data/2.5/weather?q=Kyiv-&lang=ua&
 
 
 $().ready(function() {
+    // if(document.location.pathname != '/index.html') {
+        
+    // }
+    // console.log(document.location.pathname)
     $.ajax({
         url: 'today.html',
         dataType: 'html'
@@ -43,6 +47,19 @@ $('#five_day').click(function() {
     });
 });
 
+$('#error').click(function() {
+    $.ajax({
+        url: '404.html',
+        dataType: 'html'
+    }).done(function(data) {
+        $('#content').empty();
+        $('#content').html(data);
+    }).fail(function() {
+        $('#content').empty();
+        $('#content').html('<h1>404 Error</h1>');
+    });
+});
+
 $.ajax({
     url: exampl + API,
     dataType: "json"
@@ -51,4 +68,4 @@ $.ajax({
 }).fail(function(data) {
     console.log(data.responseJSON.message)
 });
-// console.log(exampl + API);
+
