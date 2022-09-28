@@ -16,9 +16,9 @@ $().ready(function() {
     }).done(function(data) {
         $('#content').empty();
         $('#content').html(data);
-    }).fail(function() {
+    }).fail(function(data) {
         $('#content').empty();
-        $('#content').html('<h1>404 Error</h1>');
+        $('#content').html(`<h1>404 Error ${data.responseJSON.message} </h1>`);
     });
 })
 $('#today').click(function() {
@@ -66,6 +66,9 @@ $.ajax({
 }).done(function(data) {
     console.log(data);
 }).fail(function(data) {
-    console.log(data.responseJSON.message)
+    $('#content').load('404.html');
+    $().ready(function() {
+        $('#err').html(`<h1>${data.responseJSON.message}</h1>`);
+    })
 });
 
