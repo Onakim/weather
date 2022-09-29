@@ -13,6 +13,7 @@ header{
 }
 .top__header {
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     
@@ -35,4 +36,28 @@ header{
 }
 .page{
    flex: 1 1 auto;
+}
+#left__weather-icon {
+    width: 224px;
+    height: auto;
+}
+footer .row .container {
+    display: flex;
+}
+.footer__logo img {
+    width: 64px;
+    height: auto;
+}
+.footer__text {
+    flex: 1;
+    align-self: center;
+    padding-left: 20px;
+}
+.footer__menu {
+    flex: 2;
+}
+.footer__menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
 }

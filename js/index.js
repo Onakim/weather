@@ -1,7 +1,7 @@
 const API = '1ca1726301773f02a2fe357a72b037cd';
 const URL = 'https://api.openweathermap.org/data/3.0/onecall?lat=';
 // https://api.openweathermap.org/data/3.0/onecall?lat=50.4333&lon=30.5167&exclude=hourly&appid={API key}
-const exampl = 'https://api.openweathermap.org/data/2.5/weather?q=Kyiv-&lang=ua&appid=';
+const exampl = 'https://api.openweathermap.org/data/2.5/weather?q=Kyiv&units=metric&lang=ua&appid=';
 // const exampl = 'https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=';
 
 
@@ -63,12 +63,14 @@ $('#error').click(function() {
 $.ajax({
     url: exampl + API,
     dataType: "json"
-}).done(function(data) {
+}).done(function(data) {    
     console.log(data);
+    $('#city__name').text(data.name);
+    $('#left__weather-icon').attr('src', './img/' + data.weather[0].icon + '.png');
+    $('#left__weather-description').text(data.weather[0].description);
+    $('#left__weather-temp').html('Температура ' + Math.round(data.main.temp) + '&deg;');
 }).fail(function(data) {
     $('#content').load('404.html');
-    $().ready(function() {
-        $('#err').html(`<h1>${data.responseJSON.message}</h1>`);
-    })
+    
 });
 
