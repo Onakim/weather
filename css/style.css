@@ -1,10 +1,20 @@
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  color: #2e373b;
+  font-family: Circe;
+}
 .wrapper{
-   display: flex;
-   flex-direction: column;
+   min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 header{
    width: 100%;
-   background: rgb(246, 254, 253);
+   background: rgb(217, 243, 240);
 }
 .top__header {
     display: flex;
