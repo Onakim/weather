@@ -6,12 +6,6 @@ body {
   color: #2e373b;
   font-family: Circe;
 }
-.wrapper{
-   min-height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
 header{
    width: 100%;
    background: rgb(217, 243, 240);

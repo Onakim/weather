@@ -18,23 +18,36 @@
 </head>
 
 <body>
-   <div class="wrapper">
+
       <header>
          <div class="container">
-            <div class="top__header">
-               <div class="head__logo">
-                  <a href="index.html"><img src="./img/logo.png" alt="Logo"></a>
-               </div>
-               <nav class="header_nav">
-                  <ul>
-                     <li id="today">Погода на сьогодні</li>
-                     <li id="five_day">Погода на наступні 5 днів</li>
-                     <li id="error">Error</li>
-                  </ul>
-               </nav>
-               <div class="search">
-                  <input type="text" name="search" id="search" placeholder="Знайди своє місто">
-               </div>
+            <div class="row align-items-baseline">
+               
+                  <div class="col-1">
+                     <div class="head__logo">
+                        <a href="index.html"><img src="./img/logo.png" alt="Logo"></a>
+                     </div>
+                  </div>
+                  <div class="col-7">
+                     <nav class="header_nav">
+                        <ul class="nav justify-content-around">
+                           <li id="today" class="nav-item" role="button">Погода на сьогодні</li>
+                           <li id="five_day" class="nav-item" role="button">Погода на наступні 5 днів</li>
+                           <li id="error" class="nav-item" role="button">Error</li>
+                        </ul>
+                     </nav>
+                  </div>
+                  <div class="col-4">
+                     <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Знайди своє місто" aria-label="Знайди своє місто" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Шукати</button>
+                      </div>
+                      
+                     <!-- <div class="search">
+                        <input type="text" name="search" id="search" placeholder="Знайди своє місто">
+                     </div> -->
+                  </div>
+            
             </div>
          </div>
       </header>
@@ -43,6 +56,7 @@
             <div id="content"></div>
          </div>
       </main>
+
       <footer>         
             <div class="container">
                <div class="row">
@@ -71,10 +85,9 @@
                      <div class="copy__bottom">2022 © Weather. All rights reserved.</div>
                   </div>
                </div>
-            </div>
-         
+            </div>         
       </footer>
-   </div>
+
    <script src="./js/jquery-3.6.1.js"></script>
    <script src="./js/index.js"></script>
 </body>
