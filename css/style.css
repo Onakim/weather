@@ -6,11 +6,6 @@ header{
    width: 100%;
    background: rgb(246, 254, 253);
 }
-.container {
-    max-width: 1024px;
-    margin: 0 auto;
-    
-}
 .top__header {
     display: flex;
     width: 100%;
@@ -37,9 +32,25 @@ header{
 .page{
    flex: 1 1 auto;
 }
+.left {
+    width: 432px;
+    padding: 20px 40px;
+}
 #left__weather-icon {
     width: 224px;
     height: auto;
+}
+.right {
+    width: 944px;
+    padding: 20px 40px;
+}
+.right__weather-other {
+    display: flex;
+}
+.today__other-block {
+    width: 270px;
+    height: 192px;
+    padding: 16px;
 }
 footer .row .container {
     display: flex;
@@ -60,4 +71,10 @@ footer .row .container {
     list-style: none;
     display: flex;
     justify-content: space-around;
+}
+.footer__menu li {
+    cursor: pointer;
+}
+.copy__bottom {
+    text-align: center;
 }
