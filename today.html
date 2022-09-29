@@ -1,30 +1,38 @@
-<h1>Прогноз погоди на сьогодні</h1>
-<div class="row d-flex">
-    <div class="left">
-        <div>
-            <div id="city__name">Назва міста(data.name)</div>
-            <div id="date">Сьогоднішня дата(потрібно написати функцію для обчислення і виведення дати)</div>
-        </div>
-        <div>
-            <img id="left__weather-icon" src="" alt="">
-        </div>
-        <div id="left__weather-description">Опис погоди(data.weather[0].description)</div>
-        <div id="left__weather-temp">Температура на сьогодні(data.main.temp)</div>
-        <div id="left__weather-feels">Відчувається температура як: (data.main.feels_like)</div>
-
+<div class="container">
+    <div class="row">
+        <h1>Прогноз погоди на сьогодні</h1>
     </div>
-    <div class="right">
-        <div class="right__weather-hours">Прогноз погоди на залишок дня(час, іконка погоди, опис прогнозу, температура)</div>
-        <div class="right__weather-other">Інші дані по погоді на сьогодні(вологість повітря, видимість,)
-            <div class="today__other-block">Тиск (data.main.pressure)</div>
-            <div class="today__other-block">Швидкість вітру(data.wind.speed), пориви вітрі(data.wind.gust)</div>
-            <div class="today__other-block">Світанок(data.sys.sunrise), тривалість дня(потрібно написати функцію для обчислення тривалості дня), захід сонця(data.sys.sunset)</div>
-            <div class="today__other-block">Вологість повітря (data.main.humidity)</div>
-            <div class="today__other-block">Видимість(data.visibility)</div>
-            <div class="today__other-block"></div>
+</div>
+<div class="container">
+    <div class="row d-flex">
+        <div class="left">
+            <div>
+                <div id="city__name">Назва міста(data.name)</div>
+                <div id="date">Сьогоднішня дата(потрібно написати функцію для обчислення і виведення дати)</div>
+            </div>
+            <div>
+                <img id="left__weather-icon" src="" alt="">
+            </div>
+            <div id="left__weather-description">Опис погоди(data.weather[0].description)</div>
+            <div id="left__weather-temp">Температура на сьогодні(data.main.temp)</div>
+            <div id="left__weather-feels">Відчувається температура як: (data.main.feels_like)</div>
+    
+        </div>
+        <div class="right">
+            <div class="right__weather-hours">Прогноз погоди на залишок дня(час, іконка погоди, опис прогнозу, температура)</div>
+            <div class="right__weather-other">Інші дані по погоді на сьогодні(вологість повітря, видимість,)
+                <div class="today__other-block">Тиск (data.main.pressure)</div>
+                <div class="today__other-block">Швидкість вітру(data.wind.speed), пориви вітрі(data.wind.gust)</div>
+                <div class="today__other-block">Світанок(data.sys.sunrise), тривалість дня(потрібно написати функцію для обчислення тривалості дня), захід сонця(data.sys.sunset)</div>
+                <div class="today__other-block">Вологість повітря (data.main.humidity)</div>
+                <div class="today__other-block">Видимість(data.visibility)</div>
+                <div class="today__other-block"></div>
+            </div>
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="today__weather-city">Погода в сусідніх містах</div>
+<div class="container">
+    <div class="row">
+        <div class="today__weather-city">Погода в сусідніх містах</div>
+    </div>
 </div>
