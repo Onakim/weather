@@ -1,10 +1,14 @@
 .wrapper{
-   display: flex;
-   flex-direction: column;
+   min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: darkcyan;
 }
 header{
    width: 100%;
-   background: rgb(246, 254, 253);
+   background: rgb(217, 243, 240);
+   
 }
 .container {
     max-width: 1024px;
@@ -35,7 +39,7 @@ header{
     height: auto;
 }
 .page{
-   flex: 1 1 auto;
+   
 }
 #left__weather-icon {
     width: 224px;
@@ -43,6 +47,8 @@ header{
 }
 footer .row .container {
     display: flex;
+    background: darkgoldenrod;
+   
 }
 .footer__logo img {
     width: 64px;
