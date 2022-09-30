@@ -5,14 +5,18 @@ body {
   font-size: 16px;
   color: #2e373b;
   font-family: Circe;
-}
-.wrapper{
-   background-image: url(img/concept.jpg);
+  background-image: url(img/concept.jpg);
   background-size: cover;
 }
 header{
    width: 100%;
    background: rgb(217, 243, 240);
+}
+.active{
+   color: #c12eab;
+   background: rgb(186, 225, 225);
+   text-align: center;
+   width: 200px;
    
 }
 .top__header {

@@ -94,5 +94,9 @@ function weather(data) {
     $('#humidity').html('Вологість повітря: ' + data.main.humidity + '%');
     $('#visibility').html('Видимість: ' + (data.visibility / 1000) + 'км.');
 };
+$(".nav-item").click(function () {
+   $(this).closest(".nav").find(".active").removeClass("active");
+   $(this).addClass("active");
+ });
 
 
