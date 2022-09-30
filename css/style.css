@@ -1,15 +1,19 @@
-html,
+
 body {
   height: 100%;
   line-height: 1;
   font-size: 16px;
   color: #2e373b;
   font-family: Circe;
- 
+}
+.wrapper{
+   background-image: url(img/concept.jpg);
+  background-size: cover;
 }
 header{
    width: 100%;
    background: rgb(217, 243, 240);
+   
 }
 .top__header {
     display: flex;
@@ -57,6 +61,12 @@ header{
     height: 192px;
     padding: 16px;
 }
+footer{
+   height: 110px;
+}
+.marg__footer{
+   margin: 30px 0px 0px 0px;
+}
 footer .row .container {
     display: flex;
 }
@@ -85,7 +95,4 @@ footer .row .container {
 }
 .copy__bottom {
     text-align: center;
-}
-.r{
-   background-image: url('img/concept.jpg');
 }
