@@ -7,7 +7,7 @@ const exampl = 'https://api.openweathermap.org/data/2.5/weather?q=Kyiv&units=met
 
 $().ready(function() {
     // if(document.location.pathname != '/index.html') {
-       $('body').css('background-image','url(img/100.jpg)') 
+       $('body').css('background-image','url(img/100.jpg)');
     // }
     // console.log(document.location.pathname)
     $.ajax({
@@ -81,11 +81,11 @@ function weather(data) {
     let sun_rise = new Date(data.sys.sunrise * 1000);
     let sun_day = new Date((data.sys.sunset - data.sys.sunrise) * 1000);
     let today_date = new Date();
-    let getMonth = today_date.getMonth()+1
-    let getDate = today_date.getDate()
-    let getFullYear = today_date.getFullYear()
-    getDate < 10 ? getDate = `0${getDate}`: getDate
-    let general_date = `${getDate}.${getMonth}.${getFullYear} р.`
+    let getMonth = today_date.getMonth()+1;
+    let getDate = today_date.getDate();
+    let getFullYear = today_date.getFullYear();
+    getDate < 10 ? getDate = `0${getDate}`: getDate;
+    let general_date = `${getDate}.${getMonth}.${getFullYear} р.`;
     console.log();
     $('#city__name').text(data.name);
     $('#date').text(general_date);
