@@ -40,9 +40,6 @@ header{
     width: 64px;
     height: auto;
 }
-.page{
-   flex: 1 1 auto;
-}
 .left {
     width: 432px;
     padding: 20px 40px;
@@ -58,11 +55,17 @@ header{
 .right__weather-other {
     display: flex;
 }
+/* --tooday */
+.today__row{
+   font-size: 36px;
+   font-weight: 500;
+}
 .today__other-block {
-    width: 270px;
-    height: 192px;
+    /* width: 270px;
+    height: 192px; */
     padding: 16px;
 }
+/* --tooday and */
 footer{
    height: 110px;
 }
