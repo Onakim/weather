@@ -81,15 +81,20 @@ function weather(data) {
     let sun_rise = new Date(data.sys.sunrise * 1000);
     let sun_day = new Date((data.sys.sunset - data.sys.sunrise) * 1000);
     let today_date = new Date();
-    console.log(today_date);
+    let getMonth = today_date.getMonth()+1
+    let getDate = today_date.getDate()
+    let getFullYear = today_date.getFullYear()
+    getDate < 10 ? getDate = `0${getDate}`: getDate
+    let general_date = `${getDate}.${getMonth}.${getFullYear} р.`
+    console.log();
     $('#city__name').text(data.name);
-    $('#date').text(today_date);
+    $('#date').text(general_date);
     $('#left__weather-icon').attr('src', './img/' + data.weather[0].icon + '.png');
     $('#left__weather-description').text(data.weather[0].description);
     $('#left__weather-feels').html('Відчувається температура як: ' + Math.round(data.main.feels_like) + '&deg;');
     $('#pressure').html('Тиск ' + data.main.pressure);
     $('#wind').html('Швидкість вітру: ' + data.wind.speed + '<br>пориви вітру: ' + data.wind.gust);
-    $('#left__weather-temp').html('Температура ' + Math.round(data.main.temp) + '&deg;');    
+    $('#left__weather-temp').html('Температура: ' + Math.round(data.main.temp) + '&deg;');    
     $('#sun').html('Світанок починається о ' + sun_rise.getHours() + ':' + sun_rise.getMinutes() + '<br>день триває ' + sun_day.getHours() + ':' + sun_day.getMinutes() + '<br>сонце заходить о ' + sun_set.getHours() + ':' + sun_set.getMinutes());
     $('#humidity').html('Вологість повітря: ' + data.main.humidity + '%');
     $('#visibility').html('Видимість: ' + (data.visibility / 1000) + 'км.');

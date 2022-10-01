@@ -60,10 +60,16 @@ header{
    font-size: 36px;
    font-weight: 500;
 }
+.today__row-one{
+   font-size: 24px;
+   font-weight: 200;
+}
 .today__other-block {
-    /* width: 270px;
-    height: 192px; */
     padding: 16px;
+}
+#humidity img{
+width: 52px;
+height: auto;
 }
 /* --tooday and */
 footer{
