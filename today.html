@@ -1,7 +1,6 @@
 <div class="container">
    <div class="row">
       <h1>Прогноз погоди на сьогодні</h1>
-
    </div>
 </div>
 <div class="container today__row">
@@ -35,11 +34,11 @@
          вітрі(data.wind.gust)</div>
       <div id="sun" class="col-4 today__other-block my-2">Світанок(data.sys.sunrise), тривалість дня(потрібно
          написати функцію для обчислення тривалості дня), захід сонця(data.sys.sunset)</div>
-      <div id="humidity" class="col-4 today__other-block my-2">
-         <img src="img/humidity.png" alt="">
-         <div>Вологість повітря (data.main.humidity)</div>
+      <img src="img/humidity.png" alt="" class="today__row-one_img col-1 my-3">
+      <div id="humidity" class="col-4  my-4">
+         Вологість повітря (data.main.humidity)
       </div>
-      <div id="visibility" class="col-4 today__other-block my-2">Видимість(data.visibility)</div>
+      <div id="visibility" class="col-4  my-4">Видимість(data.visibility)</div>
       <div class="col-4 today__other-block"></div>
    </div>
 </div>
