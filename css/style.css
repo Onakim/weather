@@ -6,6 +6,7 @@ body {
   color: #2e373b;
   font-family: Circe;
   background-size: cover;
+  background-image: url(../img/100.jpg);
 }
 header{
    width: 100%;
