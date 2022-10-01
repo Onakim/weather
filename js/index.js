@@ -7,7 +7,7 @@ const exampl = 'https://api.openweathermap.org/data/2.5/weather?q=Kyiv&units=met
 
 $().ready(function() {
     // if(document.location.pathname != '/index.html') {
-       $('body').css('background-image','url(img/concept.jpg)') 
+       $('body').css('background-image','url(img/100.jpg)') 
     // }
     // console.log(document.location.pathname)
     $.ajax({
