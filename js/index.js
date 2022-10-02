@@ -7,19 +7,18 @@ const exampl =
   city +
   "&units=metric&lang=ua&appid=";
 // const exampl = 'https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=';
-// ------------------
+// ------------------000000000000000
 $(".btn-outline-secondary").click(function (e) {
   e.preventDefault();
   city = $(".form-control").val();
-
   console.log(city);
-
   const exampl =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     city +
     "&units=metric&lang=ua&appid=";
   // const exampl = 'https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=';
   //   history.go(0);
+
   $().ready(function () {
     // if(document.location.pathname != '/index.html') {
     $("body").css("background-image", "url(img/100.jpg)");
@@ -87,7 +86,6 @@ $(".btn-outline-secondary").click(function (e) {
         $("#content").html("<h1>404 Error</h1>");
       });
   });
-
   $("#error").click(function () {
     $.ajax({
       url: "404.html",
@@ -157,12 +155,9 @@ $(".btn-outline-secondary").click(function (e) {
     $(this).addClass("active");
   });
 });
-// ----------------------
+// ----------------------00000000000000000000000000000000000000000000000
 $().ready(function () {
-  // if(document.location.pathname != '/index.html') {
   $("body").css("background-image", "url(img/100.jpg)");
-  // }
-  // console.log(document.location.pathname)
   $.ajax({
     url: "today.html",
     dataType: "html",
