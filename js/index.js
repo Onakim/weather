@@ -4,8 +4,6 @@ const URL = "https://api.openweathermap.org/data/3.0/onecall?lat=";
 const exampl =
   "https://api.openweathermap.org/data/2.5/weather?q=Kyiv&units=metric&lang=ua&appid=";
 // const exampl = 'https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=';
-
-<<<<<<< HEAD
 $().ready(function () {
   // if(document.location.pathname != '/index.html') {
   $("body").css("background-image", "url(img/100.jpg)");
@@ -27,7 +25,6 @@ $().ready(function () {
         })
         .fail(function (data) {
           $("#content").load("404.html");
-=======
 
 $().ready(function() {
     // if(document.location.pathname != '/index.html') {
@@ -45,8 +42,7 @@ $().ready(function() {
         }).done(function(data) {    
             weather(data);
         }).fail(function(data) {
-            $('#content').load('404.html');    
->>>>>>> ab04be26667e23f11bd8cc16d954550f320077f7
+            $('#content').load('404.html'); 
         });
     })
     .fail(function (data) {
@@ -78,7 +74,6 @@ $("#today").click(function () {
       $("#content").html("<h1>404 Error</h1>");
     });
 });
-
 $("#five_day").click(function () {
   $.ajax({
     url: "five-day.html",
@@ -108,8 +103,7 @@ $("#error").click(function () {
       $("#content").html("<h1>404 Error</h1>");
     });
 });
-function weather(data) {
-<<<<<<< HEAD
+function weather(data) { HEAD
   weather = data;
   let sun_set = new Date(data.sys.sunset * 1000);
   let sun_rise = new Date(data.sys.sunrise * 1000);
@@ -158,7 +152,6 @@ function weather(data) {
   $("#humidity").html("Вологість повітря: " + data.main.humidity + "%");
   $("#visibility").html("Видимість: " + data.visibility / 1000 + "км.");
 }
-=======
     weather = data;
     let sun_set = new Date(data.sys.sunset * 1000);
     let sun_rise = new Date(data.sys.sunrise * 1000);
@@ -182,7 +175,7 @@ function weather(data) {
     $('#humidity').html('Вологість повітря: ' + data.main.humidity + '%');
     $('#visibility').html('Видимість: ' + (data.visibility / 1000) + 'км.');
 };
->>>>>>> ab04be26667e23f11bd8cc16d954550f320077f7
+
 $(".nav-item").click(function () {
   $(this).closest(".nav").find(".active").removeClass("active");
   $(this).addClass("active");
