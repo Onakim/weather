@@ -54,6 +54,14 @@ header {
   display: flex;
 }
 /* --tooday */
+.today__pngwing_box {
+  position: relative;
+}
+.today__pngwing_img {
+  position: absolute;
+  top: -110px;
+  left: 100px;
+}
 .today__hi {
   color: rgb(0, 2, 0);
 }
