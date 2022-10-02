@@ -4,6 +4,7 @@ const URL = "https://api.openweathermap.org/data/3.0/onecall?lat=";
 const exampl =
   "https://api.openweathermap.org/data/2.5/weather?q=Kyiv&units=metric&lang=ua&appid=";
 // const exampl = 'https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=';
+
 $().ready(function () {
   // if(document.location.pathname != '/index.html') {
   $("body").css("background-image", "url(img/100.jpg)");
@@ -25,24 +26,6 @@ $().ready(function () {
         })
         .fail(function (data) {
           $("#content").load("404.html");
-
-$().ready(function() {
-    // if(document.location.pathname != '/index.html') {
-    // }
-    // console.log(document.location.pathname)
-    $.ajax({
-        url: 'today.html',
-        dataType: 'html'
-    }).done(function(data) {
-        $('#content').empty();
-        $('#content').html(data);
-        $.ajax({
-            url: exampl + API,
-            dataType: "json"
-        }).done(function(data) {    
-            weather(data);
-        }).fail(function(data) {
-            $('#content').load('404.html'); 
         });
     })
     .fail(function (data) {
@@ -74,6 +57,7 @@ $("#today").click(function () {
       $("#content").html("<h1>404 Error</h1>");
     });
 });
+
 $("#five_day").click(function () {
   $.ajax({
     url: "five-day.html",
@@ -103,7 +87,7 @@ $("#error").click(function () {
       $("#content").html("<h1>404 Error</h1>");
     });
 });
-function weather(data) { HEAD
+function weather(data) {
   weather = data;
   let sun_set = new Date(data.sys.sunset * 1000);
   let sun_rise = new Date(data.sys.sunrise * 1000);
@@ -152,30 +136,6 @@ function weather(data) { HEAD
   $("#humidity").html("Вологість повітря: " + data.main.humidity + "%");
   $("#visibility").html("Видимість: " + data.visibility / 1000 + "км.");
 }
-    weather = data;
-    let sun_set = new Date(data.sys.sunset * 1000);
-    let sun_rise = new Date(data.sys.sunrise * 1000);
-    let sun_day = new Date((data.sys.sunset - data.sys.sunrise) * 1000);
-    let today_date = new Date();
-    let getMonth = today_date.getMonth()+1;
-    let getDate = today_date.getDate();
-    let getFullYear = today_date.getFullYear();
-    getDate < 10 ? getDate = `0${getDate}`: getDate;
-    let general_date = `${getDate}.${getMonth}.${getFullYear} р.`;
-    console.log();
-    $('#city__name').text(data.name);
-    $('#date').text(general_date);
-    $('#left__weather-icon').attr('src', './img/' + data.weather[0].icon + '.png');
-    $('#left__weather-description').text(data.weather[0].description);
-    $('#left__weather-feels').html('Відчувається температура як: ' + Math.round(data.main.feels_like) + '&deg;');
-    $('#pressure').html('Тиск ' + data.main.pressure);
-    $('#wind').html('Швидкість вітру: ' + data.wind.speed + '<br>пориви вітру: ' + data.wind.gust);
-    $('#left__weather-temp').html('Температура: ' + Math.round(data.main.temp) + '&deg;');    
-    $('#sun').html('Світанок починається о ' + sun_rise.getHours() + ':' + sun_rise.getMinutes() + '<br>день триває ' + sun_day.getHours() + ':' + sun_day.getMinutes() + '<br>сонце заходить о ' + sun_set.getHours() + ':' + sun_set.getMinutes());
-    $('#humidity').html('Вологість повітря: ' + data.main.humidity + '%');
-    $('#visibility').html('Видимість: ' + (data.visibility / 1000) + 'км.');
-};
-
 $(".nav-item").click(function () {
   $(this).closest(".nav").find(".active").removeClass("active");
   $(this).addClass("active");
