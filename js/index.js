@@ -9,28 +9,32 @@ function open_api() {
   $.ajax({
     url: URL + city + URL2 + API,
     dataType: "json",
-  }).done(function (data) {
+  })
+    .done(function (data) {
       weather(data);
       console.log(city);
-    }).fail(function (data) {
+    })
+    .fail(function (data) {
       $("#content").load("404.html");
     });
-};
+}
 
 //Функція відкриття сторінки погоди за сьогодні
 function open_today() {
   $.ajax({
     url: "today.html",
     dataType: "html",
-  }).done(function (data) {
+  })
+    .done(function (data) {
       $("#content").empty();
       $("#content").html(data);
       open_api();
       console.log(city);
-    }).fail(function () {
+    })
+    .fail(function () {
       $("#content").empty();
       $("#content").html("<h1>404 Error</h1>");
-    })
+    });
 }
 
 //Функція відкриття сторінки погоди за 5 днів
@@ -38,30 +42,34 @@ function open_five() {
   $.ajax({
     url: "five-day.html",
     dataType: "html",
-  }).done(function (data) {
+  })
+    .done(function (data) {
       $("#content").empty();
       $("#content").html(data);
       open_api();
       console.log(city);
-    }).fail(function () {
+    })
+    .fail(function () {
       $("#content").empty();
       $("#content").html("<h1>404 Error</h1>");
     });
-};
+}
 
 //Функція відкриття сторінки з помилкою
 function open_error() {
   $.ajax({
     url: "404.html",
     dataType: "html",
-  }).done(function (data) {
+  })
+    .done(function (data) {
       $("#content").empty();
       $("#content").html(data);
-    }).fail(function () {
+    })
+    .fail(function () {
       $("#content").empty();
       $("#content").html("<h1>404 Error</h1>");
     });
-};
+}
 
 //Функція зміни даних на сторінці today.html
 function weather(data) {
@@ -76,17 +84,42 @@ function weather(data) {
   let general_date = `${getDate}.${getMonth}.${getFullYear} р.`;
   $("#city__name").text(data.name);
   $("#date").text(general_date);
-  $("#left__weather-icon").attr("src", "./img/" + data.weather[0].icon + ".png");
+  $("#left__weather-icon").attr(
+    "src",
+    "./img/" + data.weather[0].icon + ".png"
+  );
   $("#left__weather-description").text(data.weather[0].description);
-  $("#left__weather-feels").html("Відчувається температура як: " + Math.round(data.main.feels_like) + "&deg;");
+  $("#left__weather-feels").html(
+    "Відчувається температура як: " + Math.round(data.main.feels_like) + "&deg;"
+  );
   $("#pressure").html("Тиск " + data.main.pressure);
-  $("#wind").html("Швидкість вітру: " + data.wind.speed + "<br>пориви вітру: " + data.wind.gust);
-  $("#left__weather-temp").html("Температура: " + Math.round(data.main.temp) + "&deg;");
-  $("#sun").html("Світанок починається о " + sun_rise.getHours() + ":" + sun_rise.getMinutes() + "<br>день триває " + sun_day.getHours() + ":" + sun_day.getMinutes() + "<br>сонце заходить о " + sun_set.getHours() + ":" + sun_set.getMinutes());
+  $("#wind").html(
+    "Швидкість вітру: " +
+      data.wind.speed +
+      "<br>пориви вітру: " +
+      data.wind.gust
+  );
+  $("#left__weather-temp").html(
+    "Температура: " + Math.round(data.main.temp) + "&deg;"
+  );
+  $("#sun").html(
+    "Світанок починається о " +
+      sun_rise.getHours() +
+      ":" +
+      sun_rise.getMinutes() +
+      "<br>день триває " +
+      sun_day.getHours() +
+      ":" +
+      sun_day.getMinutes() +
+      "<br>сонце заходить о " +
+      sun_set.getHours() +
+      ":" +
+      sun_set.getMinutes()
+  );
   $("#humidity").html("Вологість повітря: " + data.main.humidity + "%");
   $("#visibility").html("Видимість: " + data.visibility / 1000 + "км.");
   console.log(city);
-};
+}
 
 //Пошук погоди у введеному місті
 $("#button-addon2").click(function (e) {
