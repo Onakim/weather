@@ -82,6 +82,57 @@ header {
   height: 40px;
 }
 /* --tooday and */
+/* -----five-day-- */
+.content__five-day {
+  color: rgb(0, 2, 0);
+}
+.row__five-day {
+  margin: 100px 0px 100px 0px;
+}
+.row__five-day > *:not(:last-child) {
+  margin: 0px 2.5% 0px 0px;
+}
+.col__five-day {
+  background: rgb(119, 198, 188);
+  width: 18%;
+  text-align: center;
+}
+.col__five-day > * {
+  margin: 30px 0px 30px 0px;
+}
+.day__five-day {
+}
+.number__five-day {
+}
+.description__five-day {
+  display: flex;
+  background-color: dodgerblue;
+  justify-content: space-evenly;
+}
+.morning__five-day {
+  background: rgb(180, 202, 199);
+  padding: 10px;
+}
+.morning__five-day-img {
+  width: 30px;
+  height: 30px;
+}
+.night__five-day {
+  background: rgb(31, 69, 64);
+  color: antiquewhite;
+  padding: 10px;
+}
+.night__five-day-img {
+  width: 30px;
+  height: 30px;
+}
+.degrees__five-day {
+}
+.clouds__five-day {
+  width: 30px;
+  height: 30px;
+}
+/* -----five-day--and */
 footer {
   height: 110px;
 }
