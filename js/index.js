@@ -1,20 +1,35 @@
 const API = "1ca1726301773f02a2fe357a72b037cd";
-const URL = "https://api.openweathermap.org/data/2.5/weather?q=";
-const URL2 = "&units=metric&lang=ua&appid=";
+let url;
 let city = "Sumy";
 
 //Функції
-//Функція отримання даних по API
+//Функція отримання даних по API міста
 function open_api() {
+  url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=ua&appid=${API}`;
   $.ajax({
-    url: URL + city + URL2 + API,
+    url: url,
     dataType: "json",
   }).done(function (data) {
       weather(data);
-      console.log(city);
+      console.log(data);
     }).fail(function (data) {
       $("#content").load("404.html");
     });
+};
+
+//
+function open_Geo() {
+  $.ajax({
+    url: "today.html",
+    dataType: "html",
+  }).done(function (data) {
+      $("#content").empty();
+      $("#content").html(data);
+      defaultGeo();
+    }).fail(function () {
+      $("#content").empty();
+      $("#content").html("<h1>404 Error</h1>");
+    })
 };
 
 //Функція відкриття сторінки погоди за сьогодні
@@ -26,12 +41,11 @@ function open_today() {
       $("#content").empty();
       $("#content").html(data);
       open_api();
-      console.log(city);
     }).fail(function () {
       $("#content").empty();
       $("#content").html("<h1>404 Error</h1>");
     })
-}
+};
 
 //Функція відкриття сторінки погоди за 5 днів
 function open_five() {
@@ -74,6 +88,7 @@ function weather(data) {
   let getFullYear = today_date.getFullYear();
   getDate < 10 ? (getDate = `0${getDate}`) : getDate;
   let general_date = `${getDate}.${getMonth}.${getFullYear} р.`;
+  city = data.name;
   $("#city__name").text(data.name);
   $("#date").text(general_date);
   $("#left__weather-icon").attr("src", "./img/" + data.weather[0].icon + ".png");
@@ -88,6 +103,32 @@ function weather(data) {
   console.log(city);
 };
 
+//Функція визначення геоданих
+function onPosition(position) {
+  const {latitude, longitude} = position.coords;
+  url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&lang=ua&appid=${API}`;
+  $.ajax({
+    url: url,
+    dataType: "json",
+  }).done(function (data) {
+      weather(data);
+    }).fail(function (data) {
+      $("#content").load("404.html");
+    });
+  console.log(position);
+};
+
+//Функція помилки отримання геоданих
+function onError(error) {
+  console.log(error.code);
+  return 1;
+};
+
+//Отримуємо геодані
+function defaultGeo() {
+  navigator.geolocation.getCurrentPosition(onPosition, onError);
+};
+
 //Пошук погоди у введеному місті
 $("#button-addon2").click(function (e) {
   e.preventDefault();
@@ -96,7 +137,11 @@ $("#button-addon2").click(function (e) {
 });
 
 //Автозагрузка при заході на сторінку
-$().ready(open_today);
+$().ready(function() {
+  // open_today();
+  open_Geo();
+});
+
 //Відкриття сторінки погоди на сьогодні
 $("#today").click(open_today);
 //Віткриття сторінки погоди за 5 днів
