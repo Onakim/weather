@@ -14,12 +14,25 @@ body {
 }
 header {
   width: 100%;
-  background: rgb(217, 243, 240);
+  background: rgba(75, 255, 105, 0.466);
+  font-size: 18px;
 }
 .active {
-  color: #c12eab;
-  background: rgb(186, 225, 225);
+  color: #a70000b5;
+  background: rgba(160, 255, 255, 0.265);
   text-align: center;
+  font-size: 19px;
+  border-radius: 25%;
+  transition: background 1s;
+}
+.btn-outline-secondary {
+  color: aliceblue;
+  border: 2px solid rgba(0, 255, 145, 0.6);
+}
+.active:hover {
+  color: #780101c1;
+
+  background: rgba(160, 255, 255, 0.426);
 }
 .top__header {
   display: flex;
@@ -73,6 +86,7 @@ header {
 }
 .today__hi {
   color: rgb(0, 2, 0);
+  margin: 20px 0px 0px 0px;
 }
 .today__row {
   font-size: 36px;
@@ -96,22 +110,27 @@ header {
 }
 /* --tooday and */
 /* -----five-day-- */
+
 .content__five-day {
   color: rgb(0, 2, 0);
 }
+.content__five-day h1 {
+  text-align: center;
+  margin: 30px 0px 0px 0px;
+}
 .row__five-day {
-  margin: 100px 0px 100px 0px;
+  margin: 150px 0px 150px 0px;
 }
 .row__five-day > *:not(:last-child) {
   margin: 0px 2.5% 0px 0px;
 }
 .col__five-day {
-  background: rgb(119, 198, 188);
+  background: rgba(171, 171, 171, 0.648);
   width: 18%;
   text-align: center;
 }
 .col__five-day > * {
-  margin: 30px 0px 30px 0px;
+  margin: 40px 0px 30px 0px;
 }
 /* .day__five-day {
 }
@@ -119,25 +138,27 @@ header {
 } */
 .description__five-day {
   display: flex;
-  background-color: dodgerblue;
-  justify-content: space-evenly;
+  /* background-color: dodgerblue; */
+  justify-content: space-around;
 }
 .morning__five-day {
-  background: rgb(180, 202, 199);
-  padding: 10px;
+  background: rgba(158, 136, 255, 0.6);
+  padding: 20px;
 }
 .morning__five-day-img {
   width: 30px;
   height: 30px;
+  margin: 10px 0px 0px 0px;
 }
 .night__five-day {
-  background: rgb(31, 69, 64);
+  background: rgba(0, 0, 0, 0.932);
   color: antiquewhite;
-  padding: 10px;
+  padding: 20px;
 }
 .night__five-day-img {
   width: 30px;
   height: 30px;
+  margin: 10px 0px 0px 0px;
 }
 /* .degrees__five-day {
 } */
@@ -157,20 +178,24 @@ footer .row .container {
   height: auto;
 }
 .footer__text {
+  font-size: 19px;
   flex: 1;
   align-self: center;
   padding-left: 20px;
   padding-top: 30px;
 }
 .footer__menu {
+  font-size: 19px;
   flex: 2;
 }
 .footer__menu ul {
+  font-size: 19px;
   list-style: none;
   display: flex;
   justify-content: space-around;
 }
 .footer__menu li {
+  font-size: 19px;
   cursor: pointer;
 }
 .copy__bottom {
