@@ -9,7 +9,7 @@ body {
   background-image: url(../img/100.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: (blue, aqua);
+  background-color: blue;
 }
 .wrapper {
   height: 100%;
