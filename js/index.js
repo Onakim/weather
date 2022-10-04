@@ -98,12 +98,14 @@ function weather(data) {
   $("#date").text(general_date);
   $("#left__weather-icon").attr("src", "./img/" + data.weather[0].icon + ".png");
   $("#left__weather-description").text(data.weather[0].description);
-  $("#left__weather-feels").html("Відчувається температура як: " + Math.round(data.main.feels_like) + "&deg;" );
+  $("#left__weather-feels").html(Math.round(data.main.feels_like));
   $("#pressure").text(data.main.pressure);
   $("#wind_speed").text(data.wind.speed);
   $('#wind_gust').text(data.wind.gust);
   $("#left__weather-temp").html("Температура: " + Math.round(data.main.temp) + "&deg;");
-  $("#sun").html("Світанок починається о " + sun_rise.getHours() + ":" + sun_rise.getMinutes() + "<br>день триває " + sun_day.getHours() + ":" + sun_day.getMinutes() + "<br>сонце заходить о " + sun_set.getHours() + ":" + sun_set.getMinutes());
+  $('#sunrise').text(sun_rise.getHours() + ":" + sun_rise.getMinutes());
+  $('#lenght_day').text(sun_day.getHours() + ":" + sun_day.getMinutes());
+  $('#sunset').text(sun_set.getHours() + ":" + sun_set.getMinutes());
   $("#humidity").text(data.main.humidity);
   $("#visibility").text(data.visibility / 1000);
   console.log(city);
