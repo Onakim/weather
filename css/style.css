@@ -76,6 +76,7 @@ header {
   min-height: 100vh;
 }
 /* --tooday */
+
 .today__pngwing_box {
   position: relative;
 }
@@ -92,6 +93,15 @@ header {
   font-size: 36px;
   font-weight: 500;
   color: rgb(0, 2, 0);
+}
+.today-temperature__text {
+  display: flex;
+  align-items: center;
+}
+.today-temperature__img img {
+  width: 80px;
+  height: 100%;
+  margin-left: 30px;
 }
 .today__row-one {
   font-size: 24px;
