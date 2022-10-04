@@ -1,3 +1,4 @@
+html,
 body {
   height: 100%;
   line-height: 1;
@@ -52,6 +53,10 @@ header {
 }
 .right__weather-other {
   display: flex;
+}
+.page {
+}
+.content {
 }
 /* --tooday */
 .today__pngwing_box {
