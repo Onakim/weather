@@ -59,7 +59,8 @@ header {
   display: flex;
 }
 #content {
-  height: 100%;
+  max-height: 100%;
+  min-height: 100vh;
 }
 /* --tooday */
 .today__pngwing_box {
