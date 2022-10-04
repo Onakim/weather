@@ -58,7 +58,7 @@ header {
   display: flex;
 }
 #content {
-  height: 100vh;
+  height: 100%;
 }
 /* --tooday */
 .today__pngwing_box {
