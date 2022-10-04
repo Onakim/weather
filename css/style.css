@@ -54,10 +54,10 @@ header {
 .right__weather-other {
   display: flex;
 }
-.page {
+/* .page {
 }
 .content {
-}
+} */
 /* --tooday */
 .today__pngwing_box {
   position: relative;
@@ -109,10 +109,10 @@ header {
 .col__five-day > * {
   margin: 30px 0px 30px 0px;
 }
-.day__five-day {
+/* .day__five-day {
 }
 .number__five-day {
-}
+} */
 .description__five-day {
   display: flex;
   background-color: dodgerblue;
@@ -135,8 +135,8 @@ header {
   width: 30px;
   height: 30px;
 }
-.degrees__five-day {
-}
+/* .degrees__five-day {
+} */
 .clouds__five-day {
   width: 30px;
   height: 30px;
