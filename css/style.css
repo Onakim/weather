@@ -62,19 +62,13 @@ header {
 .right__weather-other {
   display: flex;
 }
-<<<<<<< HEAD
 
 .page {
   flex: 1 1 auto;
 }
-/* .page {
->>>>>>> 45c7db61f2018d0549182319b57d00ff15004dfa
-=======
-/* .page { */
-/* } */
+
 #content {
   height: 100vh;
->>>>>>> c57c2e5526e91d0584d2c60640cf6dd292afe2a6
 }
 /* --tooday */
 .today__pngwing_box {
