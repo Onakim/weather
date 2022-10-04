@@ -4,82 +4,76 @@
    </div>
 </div>
 <div class="container today__row">
-
    <div class="row">
-      <div class="col-12 col-sm-5">
-         <div class="row">
-            <div id="city__name" class="col-6">Назва міста(data.name)</div>
-            <div id="date" class="col-6 bg-warnind">Сьогоднішня дата</div>
+      <div id="city__name" class="col-3">Назва міста(data.name)</div>
+      <div id="date" class="col-3 bg-warnind">Сьогоднішня дата</div>
+   </div>
+   <div class="row my-5">
+      <img class="col-1" id="left__weather-icon" src="" alt="">
+      <div class="col-4  p-5">Опади: <span id="left__weather-description">(data.weather[0].description)</span></div>
+      <div class="col-4 today__pngwing_box"><img class="today__pngwing_img" src="img/pngwing.100.png" alt=""
+            height="180%" width="auto"></div>
+   </div>
+   <div class="row">
+
+      <div class="today-temperature__text col-1 w-100  py-3">
+         <div id="left__weather-temp">Температура на
+            сьогодні:(data.main.temp)
          </div>
-
-
-         <img class="col-12" id="left__weather-icon" src="" alt="">
-         <div class="col-12">Опади: <span id="left__weather-description">(data.weather[0].description)</span></div>
-
-         <div class="today-temperature__text col-1 w-100  py-3">
-            <div id="left__weather-temp">Температура на
-               сьогодні:(data.main.temp)
-            </div>
-            <div class="today-temperature__img"></div>
-         </div>
-         <div class="col-1 w-100  py-3">Відчувається температура як: <span
-               id="left__weather-feels">(data.main.feels_like)</span>&deg;</div>
+         <div class="today-temperature__img"></div>
+      </div>
+      <div class="col-1 w-100  py-3">Відчувається температура як: <span
+            id="left__weather-feels">(data.main.feels_like)</span>&deg;</div>
+   </div>
+   <div class="row">
+      <div class="right__weather-hours d-none">Прогноз погоди на залишок дня(час, іконка погоди, опис прогнозу,
+         температура)</div>
+   </div>
+   <div class="row py-3">
+      <div class="col-12 right__weather-other">Інші дані по погоді на сьогодні
+      </div>
+   </div>
+   <div class="row today__row-one">
+      <div class="col-4 today__other-block m-2">
+         <img src="img/hot.png" alt="" class="today__row-one_img col-1">
+         Тиск <span id="pressure">(data.main.pressure)</span> мм.р.ст.
       </div>
 
-      <div class="row">
-         <div class="right__weather-hours d-none">Прогноз погоди на залишок дня(час, іконка погоди, опис прогнозу,
-            температура)</div>
+      <div class="col-4 today__other-block  today__other-block_wind m-2">
+         <img src="img/windy_flag.png" alt="" class="today__row-one_img col-1">
+         Швидкість вітру <span id="wind_speed">(data.wind.speed)</span>,
+         <br>
+         <img src="img/hurricane.png" alt="" class="today__row-one_img col-1">
+         Пориви вітру <span id="wind_gust">(data.wind.gust)</span>
       </div>
-      <div class="row py-3">
-         <div class="col-12 right__weather-other">Інші дані по погоді на сьогодні
-         </div>
+
+      <div class="col-4 today__other-block m-2">
+         <img src="img/sunrise.png" alt="" class="today__row-one_img col-1">
+         Світанок починається о <span id="sunrise">(data.sys.sunrise)</span>
+         <br>
+         <img src="img/day.png" alt="" class="today__row-one_img col-1">
+         день триває <span id="lenght_day"></span>
+         <br>
+         <img src="img/sunset.png" alt="" class="today__row-one_img col-1">
+         сонце заходить о <span id="sunset"></span>
       </div>
-      <div class="row today__row-one">
-         <div class="col-6 col-sm-4 today__other-block m-2">
-            <img src="img/hot.png" alt="" class="today__row-one_img col-1">
-            Тиск <span id="pressure">(data.main.pressure)</span> мм.р.ст.
-         </div>
 
-         <div class="col-6 col-sm-4 today__other-block  today__other-block_wind m-2">
-            <img src="img/windy_flag.png" alt="" class="today__row-one_img col-1">
-            Швидкість вітру <span id="wind_speed">(data.wind.speed)</span>,
-            <br>
-            <img src="img/hurricane.png" alt="" class="today__row-one_img col-1">
-            Пориви вітру <span id="wind_gust">(data.wind.gust)</span>
-         </div>
-         <div class="col-4 today__other-block m-2">
+      <div class="col-4 today__other-block m-2">
+         <img src="img/humidity.png" alt="" class="today__row-one_img col-1">
+         Вологість повітря <span id="humidity">(data.main.humidity)</span>%
+      </div>
 
-            <div class="col-6 col-sm-4 today__other-block m-2">
+      <div class="col-4 today__other-block m-2">
+         <img src="img/windy.png" alt="" class="today__row-one_img col-1">
+         Видимість <span id="visibility">(data.visibility)</span>км.
+      </div>
 
-               <img src="img/sunrise.png" alt="" class="today__row-one_img col-1">
-               Світанок починається о <span id="sunrise">(data.sys.sunrise)</span>
-               <br>
-               <img src="img/day.png" alt="" class="today__row-one_img col-1">
-               день триває <span id="lenght_day"></span>
-               <br>
-               <img src="img/sunset.png" alt="" class="today__row-one_img col-1">
-               сонце заходить о <span id="sunset"></span>
-            </div>
-            <div class="col-4 today__other-block m-2">
+      <div class="col-4 today__other-block m-2"></div>
 
-
-               <div class="col-6 col-sm-4 today__other-block m-2">
-
-                  <img src="img/humidity.png" alt="" class="today__row-one_img col-1">
-                  Вологість повітря <span id="humidity">(data.main.humidity)</span>%
-               </div>
-
-               <div class="col-6 col-sm-4 today__other-block m-2">
-                  <img src="img/windy.png" alt="" class="today__row-one_img col-1">
-                  Видимість <span id="visibility">(data.visibility)</span>км.
-               </div>
-
-               <div class="col-6 col-sm-4 today__other-block m-2 d-none"></div>
-
-            </div>
-         </div>
-         <div class="container d-none">
-            <div class="row">
-               <div class="today__weather-city">Погода в сусідніх містах</div>
-            </div>
-         </div>
+   </div>
+</div>
+<div class="container d-none">
+   <div class="row">
+      <div class="today__weather-city">Погода в сусідніх містах</div>
+   </div>
+</div>
