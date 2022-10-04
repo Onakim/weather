@@ -3,7 +3,7 @@ body {
   /* height: 100%; */
   line-height: 1;
   font-size: 16px;
-  color: #2e373b;
+  color: #ffffff;
   font-family: Circe;
   background-size: cover;
   /* зминив беграунд */
@@ -14,11 +14,11 @@ body {
 }
 header {
   width: 100%;
-  background: rgba(75, 255, 105, 0.466);
+  background: linear-gradient(rgb(0, 255, 255), rgb(46, 46, 255));
   font-size: 18px;
 }
 .active {
-  color: #a70000b5;
+  color: #2a2a2ab5;
   background: rgba(160, 255, 255, 0.265);
   text-align: center;
   font-size: 19px;
@@ -30,9 +30,9 @@ header {
   border: 2px solid rgba(0, 255, 145, 0.6);
 }
 .active:hover {
-  color: #780101c1;
+  color: #000000c1;
 
-  background: rgba(160, 255, 255, 0.426);
+  background: rgba(255, 255, 255, 0.426);
 }
 .top__header {
   display: flex;
