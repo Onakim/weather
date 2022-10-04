@@ -1,12 +1,12 @@
 <div class="container">
-   <div class="row">
+   <div class="row my-3">
       <h1 class="today__hi">Прогноз погоди на сьогодні</h1>
    </div>
 </div>
 <div class="container today__row">
    <div class="row">
-      <div id="city__name" class="col-6">Назва міста(data.name)</div>
-      <div id="date" class="col-6 bg-warnind">Сьогоднішня дата</div>
+      <div id="city__name" class="col-3">Назва міста(data.name)</div>
+      <div id="date" class="col-3 bg-warnind">Сьогоднішня дата</div>
    </div>
    <div class="row my-5">
       <img class="col-1" id="left__weather-icon" src="" alt="">
@@ -28,14 +28,20 @@
       </div>
    </div>
    <div class="row today__row-one">
-      <div class="col-4 today__other-block my-2">Тиск <span id="pressure">(data.main.pressure)</span> мм.р.ст.</div>
+      <div class="col-4 today__other-block m-2">
+         <img src="img/hot.png" alt="" class="today__row-one_img col-1">
+         Тиск <span id="pressure">(data.main.pressure)</span> мм.р.ст.
+      </div>
 
-      <div id="wind" class="col-4 today__other-block  today__other-block_wind my-2">
+      <div class="col-4 today__other-block  today__other-block_wind m-2">
+         <img src="img/windy_flag.png" alt="" class="today__row-one_img col-1">
          Швидкість вітру <span id="wind_speed">(data.wind.speed)</span>,
-         <br>Пориви вітру <span id="wind_gust">(data.wind.gust)</span>
+         <br>
+         <img src="img/hurricane.png" alt="" class="today__row-one_img col-1">
+         Пориви вітру <span id="wind_gust">(data.wind.gust)</span>
       </div>
       
-      <div class="col-4 today__other-block my-2">
+      <div class="col-4 today__other-block m-2">
          <img src="img/sunrise.png" alt="" class="today__row-one_img col-1">
          Світанок починається о <span id="sunrise">(data.sys.sunrise)</span>
          <br>
@@ -46,16 +52,17 @@
          сонце заходить о <span id="sunset"></span>
       </div>
       
-      <div class="col-4 today__other-block my-2">
+      <div class="col-4 today__other-block m-2">
          <img src="img/humidity.png" alt="" class="today__row-one_img col-1">
          Вологість повітря <span id="humidity">(data.main.humidity)</span>%
       </div>
 
-      <div class="col-4 today__other-block my-2">
+      <div class="col-4 today__other-block m-2">
+         <img src="img/windy.png" alt="" class="today__row-one_img col-1">
          Видимість <span id="visibility">(data.visibility)</span>км.
       </div>
 
-      <div class="col-4 today__other-block my-2"></div>
+      <div class="col-4 today__other-block m-2"></div>
 
    </div>
 </div>

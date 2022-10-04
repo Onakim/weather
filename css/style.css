@@ -81,6 +81,10 @@ header {
 }
 .today__other-block {
   padding: 16px;
+  width: 415px;
+  height: 155px;
+  border: 1px solid gray;
+  border-radius: 10px;
 }
 .today__row-one_img {
   width: auto;
