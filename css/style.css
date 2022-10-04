@@ -54,10 +54,11 @@ header {
 .right__weather-other {
   display: flex;
 }
-/* .page {
+/* .page { */
+/* } */
+#content {
+  height: 100vh;
 }
-.content {
-} */
 /* --tooday */
 .today__pngwing_box {
   position: relative;
