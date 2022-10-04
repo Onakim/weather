@@ -16,8 +16,14 @@
    </div>
    <div class="row">
 
-      <div id="left__weather-temp" class="col-1 w-100  py-3">Температура на сьогодні:(data.main.temp)</div>
-      <div class="col-1 w-100  py-3">Відчувається температура як: <span id="left__weather-feels">(data.main.feels_like)</span>&deg;</div>
+      <div class="today-temperature__text col-1 w-100  py-3">
+         <div id="left__weather-temp">Температура на
+            сьогодні:(data.main.temp)
+         </div>
+         <div class="today-temperature__img"></div>
+      </div>
+      <div class="col-1 w-100  py-3">Відчувається температура як: <span
+            id="left__weather-feels">(data.main.feels_like)</span>&deg;</div>
    </div>
    <div class="row">
       <div class="right__weather-hours d-none">Прогноз погоди на залишок дня(час, іконка погоди, опис прогнозу,
@@ -40,7 +46,7 @@
          <img src="img/hurricane.png" alt="" class="today__row-one_img col-1">
          Пориви вітру <span id="wind_gust">(data.wind.gust)</span>
       </div>
-      
+
       <div class="col-4 today__other-block m-2">
          <img src="img/sunrise.png" alt="" class="today__row-one_img col-1">
          Світанок починається о <span id="sunrise">(data.sys.sunrise)</span>
@@ -51,7 +57,7 @@
          <img src="img/sunset.png" alt="" class="today__row-one_img col-1">
          сонце заходить о <span id="sunset"></span>
       </div>
-      
+
       <div class="col-4 today__other-block m-2">
          <img src="img/humidity.png" alt="" class="today__row-one_img col-1">
          Вологість повітря <span id="humidity">(data.main.humidity)</span>%
