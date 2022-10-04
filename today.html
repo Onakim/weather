@@ -11,7 +11,7 @@
    </div>
    <div class="row my-5">
       <img class="col-1" id="left__weather-icon" src="" alt="">
-      <div class="col-4  p-5" id="left__weather-description">Опис погоди(data.weather[0].description)</div>
+      <div class="col-4  p-5">Опис погоди <span id="left__weather-description">(data.weather[0].description)</span></div>
       <div class="col-4 today__pngwing_box"><img class="today__pngwing_img" src="img/pngwing.100.png" alt=""
             height="180%" width="auto"></div>
    </div>
@@ -21,7 +21,7 @@
       <div id="left__weather-feels" class="col-1 w-100  py-3">Відчувається температура як: (data.main.feels_like)</div>
    </div>
    <div class="row">
-      <div class="right__weather-hours">Прогноз погоди на залишок дня(час, іконка погоди, опис прогнозу,
+      <div class="right__weather-hours d-none">Прогноз погоди на залишок дня(час, іконка погоди, опис прогнозу,
          температура)</div>
    </div>
    <div class="row py-3">
@@ -29,24 +29,23 @@
       </div>
    </div>
    <div class="row today__row-one">
-      <div id="pressure" class="col-3 today__other-block my-2">Тиск (data.main.pressure)</div>
+      <div class="col-3 today__other-block my-2">Тиск <span id="pressure">(data.main.pressure)</span>мм.</div>
       <!-- <img src="img/wind.png" alt="" class="today__row-one_img today__row-one_img-wind"> -->
-      <div id="wind" class="col-4 today__other-block  today__other-block_wind my-2">Швидкість вітру(data.wind.speed),
-         пориви
-         вітрі(data.wind.gust)</div>
+      <div id="wind" class="col-4 today__other-block  today__other-block_wind my-2">Швидкість вітру <span id="wind_speed">(data.wind.speed)</span>,
+         <br>Пориви вітру <span id="wind_gust">(data.wind.gust)</span></div>
       <img src="img/sunrise.png" alt="" class="today__row-one_img col-1 my-3">
-      <div id="sun" class="col-4 today__other-block my-2">Світанок(data.sys.sunrise), тривалість дня(потрібно
+      <div id="sun" class="col-4 today__other-block my-2">Світанок <span id="sunrise">(data.sys.sunrise)</span>, тривалість дня(потрібно
          написати функцію для обчислення тривалості дня), захід сонця(data.sys.sunset)</div>
       <img src="img/humidity.png" alt="" class="today__row-one_img col-1 my-3">
-      <div id="humidity" class="col-4  my-4">
-         Вологість повітря (data.main.humidity)
+      <div class="col-4  my-4">
+         Вологість повітря <span id="humidity">(data.main.humidity)</span>%
       </div>
-      <div id="visibility" class="col-4  my-4">Видимість(data.visibility)</div>
+      <div class="col-4  my-4">Видимість <span id="visibility">(data.visibility)</span>км.</div>
       <div class="col-4 today__other-block"></div>
    </div>
 </div>
 <div class="container">
    <div class="row">
-      <div class="today__weather-city">Погода в сусідніх містах</div>
+      <div class="today__weather-city d-none">Погода в сусідніх містах</div>
    </div>
 </div>
