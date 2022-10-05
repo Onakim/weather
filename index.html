@@ -21,8 +21,32 @@
 
    <header>
       <div class="container">
-         <div class="row align-items-baseline">
-
+         <div class="row">
+            <nav class="navbar navbar-expand-lg">
+               <div class="container-fluid">
+                 <!-- <a class="navbar-brand" href="index.html">Navbar</a> -->
+                 <a class="navbar-brand head__logo" href="index.html"><img src="./img/logo.png" alt="Logo"></a>
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                 </button>
+                 <div class="collapse navbar-collapse" id="navbarNav">
+                   <ul class="navbar-nav">
+                     <li id="today" class="nav-item active p-4">
+                       <a class="nav-link" aria-current="page">Погода на сьогодні</a>
+                     </li>
+                     <li id="five_day" class="nav-item p-4">
+                       <a class="nav-link">Погода на наступні 5 днів</a>
+                     </li>                     
+                   </ul>
+                 </div>
+                 <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Знайди своє місто" aria-label="Search">
+                  <button id="button-addon2" class="btn btn-outline-success" type="submit">Шукати</button>
+                </form>
+            
+               </div>
+             </nav>
+<!--              
             <div class="col-1">
                <div class="head__logo">
                   <a href="index.html"><img src="./img/logo.png" alt="Logo"></a>
@@ -43,7 +67,7 @@
                      aria-describedby="button-addon2">
                   <button class="btn btn-outline-secondary" type="button" id="button-addon2">Шукати</button>
                </div>
-            </div>
+            </div> -->
 
          </div>
       </div>
@@ -78,6 +102,7 @@
    </footer>
 
    <script src="./js/jquery-3.6.1.js"></script>
+   <script src="./js/bootstrap.min.js"></script>
    <script src="./js/index.js"></script>
 </body>
 

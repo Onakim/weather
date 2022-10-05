@@ -17,6 +17,9 @@ header {
   background: linear-gradient(rgb(0, 255, 255), rgb(46, 46, 255));
   font-size: 18px;
 }
+.nav-item {
+  cursor: pointer;
+}
 .active {
   color: #000000c1;
   background: rgba(160, 255, 255, 0.265);
@@ -25,30 +28,21 @@ header {
   border-radius: 25%;
   transition: background 1s;
 }
-.btn-outline-secondary {
+.btn-outline-success {
   color: aliceblue;
   border: 2px solid rgba(0, 255, 145, 0.6);
 }
 .active:hover {
   background: rgba(255, 255, 255, 0.426);
 }
-.top__header {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
+header li {
+  margin: 0 10px;
 }
-.top__header ul {
-  list-style: none;
-  display: flex;
-  padding: 0;
-}
-.top__header li {
-  cursor: pointer;
-  padding-right: 40px;
-}
-.top__header li:hover {
-  font-weight: bold;
+header li:hover {
+  background: rgba(160, 255, 255, 0.265);
+  text-align: center;
+  border-radius: 25%;
+  transition: background 1s;
 }
 .head__logo img {
   width: 64px;
