@@ -177,7 +177,8 @@ header {
 }
 /* -----five-day--and */
 footer {
-  height: 110px;
+  height: 100%;
+  font-size: 19px;
 }
 footer .row .container {
   display: flex;
