@@ -103,6 +103,7 @@ header li:hover {
   padding: 16px;
   width: 415px;
   height: 155px;
+  background: rgba(255, 255, 255, 0.265);
   border: 1px solid gray;
   border-radius: 10px;
 }
@@ -120,21 +121,20 @@ header li:hover {
   text-align: center;
   margin: 30px 0px 0px 0px;
 }
-.row__five-day {
+/* .row__five-day {
   margin: 150px 0px 150px 0px;
-}
+} */
 .row__five-day > *:not(:last-child) {
   margin: 0px 2.5% 0px 0px;
 }
 .col__five-day {
   background: rgba(255, 255, 255, 0.265);
-  width: 18%;
-  text-align: center;
-  border-radius: 10%;
+  border: 1px solid gray;
+  border-radius: 10px;
 }
-.col__five-day > * {
+/* .col__five-day > * {
   margin: 40px 0px 30px 0px;
-}
+} */
 /* .day__five-day {
 }
 .number__five-day {

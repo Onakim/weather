@@ -182,7 +182,7 @@ $("#error").click(open_error);
 
 //Зміна класу в меню
 $(".nav-item").click(function () {
-  $(this).closest(".nav").find(".active").removeClass("active");
+  $(this).closest(".navbar-nav").find(".active").removeClass("active");
   $(this).addClass("active");
   console.log(city);
 });
